@@ -71,30 +71,30 @@
     <lp>12</lp>
     <nazwa_transakcji>wpłata</nazwa_transakcji>
     <kwota waluta="EUR">15000.00</kwota>
-<wykonal>Jan J.</wykonal>
-</transaction>
-<transaction>
-<lp>13</lp>
-<nazwa_transakcji>przelew</nazwa_transakcji>
-<kwota waluta="PLN">100.00</kwota>
-<wykonal>Ewa B.</wykonal>
-</transaction>
-<transaction>
-<lp>14</lp>
-<nazwa_transakcji>korekta</nazwa_transakcji>
-<kwota waluta="EUR">4.00</kwota>
-<wykonal>Adam A.</wykonal>
-</transaction>
-<transaction>
-<lp>15</lp>
-<nazwa_transakcji>wpłata</nazwa_transakcji>
-<kwota waluta="EUR">900.00</kwota>
-<wykonal>Jan J.</wykonal>
-</transaction>
-<transaction>
-<lp>16</lp>
-<nazwa_transakcji>wpłata</nazwa_transakcji>
-<kwota waluta="EUR">100.00</kwota>
-<wykonal>Jan J.</wykonal>
-</transaction>
+    <wykonal>Jan J.</wykonal>
+  </transaction>
+  <transaction>
+    <lp>13</lp>
+    <nazwa_transakcji>przelew</nazwa_transakcji>
+    <kwota waluta="PLN">100.00</kwota>
+    <wykonal>Ewa B.</wykonal>
+  </transaction>
+  <transaction>
+    <lp>14</lp>
+    <nazwa_transakcji>korekta</nazwa_transakcji>
+    <kwota waluta="EUR">4.00</kwota>
+    <wykonal>Adam A.</wykonal>
+  </transaction>
+  <transaction>
+    <lp>15</lp>
+    <nazwa_transakcji>wpłata</nazwa_transakcji>
+    <kwota waluta="EUR">900.00</kwota>
+    <wykonal>Jan J.</wykonal>
+  </transaction>
+  <transaction>
+    <lp>16</lp>
+    <nazwa_transakcji>wpłata</nazwa_transakcji>
+    <kwota waluta="EUR">100.00</kwota>
+    <wykonal>Jan J.</wykonal>
+  </transaction>
 </transactions>

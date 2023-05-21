@@ -5,18 +5,18 @@
         <xs:element name="transaction" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="lp" type="xs:integer"/>
-              <xs:element name="nazwa_transakcji" type="xs:string"/>
+              <xs:element name="lp" type="xs:integer" />
+              <xs:element name="nazwa_transakcji" type="xs:string" />
               <xs:element name="kwota">
                 <xs:complexType>
                   <xs:simpleContent>
                     <xs:extension base="xs:decimal">
-                      <xs:attribute name="waluta" type="xs:string"/>
+                      <xs:attribute name="waluta" type="xs:string" />
                     </xs:extension>
                   </xs:simpleContent>
                 </xs:complexType>
               </xs:element>
-              <xs:element name="wykonal" type="xs:string" minOccurs="0"/>
+              <xs:element name="wykonal" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
