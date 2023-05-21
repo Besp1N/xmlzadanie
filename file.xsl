@@ -5,111 +5,122 @@
       <head>
         <title>Document</title>
         <style>
-          * {
-            padding: 0;
-            margin: 0;
-            color: #fff;
-            font-family: Arial, Helvetica, sans-serif;
-          }
-          body {
-            width: 100%;
-            height: 100%;
-            background: rgb(2, 0, 36);
-            background: linear-gradient(
-              rgb(225, 48, 195) 0%,
-              rgb(81, 38, 138) 45%,
-              rgb(101, 45, 184) 100%
-            );
-            background-attachment: fixed;
-          }
-          header {
-            text-align: center;
-            font-size: 2rem;
-            width: 100%;
-            position: relative;
-          }
-          header::after {
-            content: "";
-            height: 2px;
-            width: 50%;
-            background-color: rgb(132, 0, 255);
-            position: absolute;
-            left: 50%;
-            translate: -50% -50%;
-            bottom: -10px;
-          }
-          .table-section {
-            width: 100%;
-            height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-          td, th {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: center;
-            font-size: 1.1rem;
-          }
-          caption {
-            text-align: left;
-            margin-bottom: 5px;
-            font-size: 1.2rem;
-          }
-          .glass {
-            background: linear-gradient(
-              135deg,
-              rgba(255, 255, 255, 0.1),
-              rgba(255, 255, 255, 0)
-            );
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-            padding: 20px;
-          }
-          #table2 {
-            display: none;
-          }
-          #table3 {
-            display: none;
-          }
-          .btn-section {
-            width: 100%;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            margin-top: 30px;
-          }
-          button {
-            color: #fff;
-            max-width: 200px;
-            padding: 5px;
-            height: 50px;
-            border: 2px solid rgb(132, 0, 255);
-            background-color: transparent;
-            outline: none;
-            cursor: pointer;
-            font-size: 1.1rem;
-            border-radius: 20px;
-            position: relative;
-            overflow: hidden;
-          }
-          .btn-section button span {
-            background-color: rgb(132, 0, 255);
-            height: 100%;
-            width: 0;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            z-index: -1;
-            transition: 0.5s;
-          }
-          .btn-section button:hover span {
-            width: 100%;
-          }
+         * {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  width: 100%;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    rgb(225, 48, 195) 0%,
+    rgb(81, 38, 138) 45%,
+    rgb(101, 45, 184) 100%
+  );
+  background-attachment: fixed;
+}
+header {
+  text-align: center;
+  font-size: 2rem;
+  max-width: 100%;
+  min-height: 80px;
+  position: relative;
+}
+header::after {
+  content: "";
+  height: 2px;
+  width: 50%;
+  background-color: rgb(132, 0, 255);
+  position: absolute;
+  left: 50%;
+  translate: -50% -50%;
+  bottom: -10px;
+}
+.table-section {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+td, th {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+caption {
+  text-align: left;
+  font-style: oblique;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+.glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 30px;
+  max-width: 250px;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#table2 {
+  display: none;
+}
+#table3 {
+  display: none;
+}
+.btn-section {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+button {
+  color: #fff;
+  max-width: 200px;
+  padding: 5px;
+  height: 50px;
+  border: 2px solid rgb(132, 0, 255);
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.btn-section button span {
+  background-color: rgb(132, 0, 255);
+  height: 100%;
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+.btn-section button:hover span{
+  width: 100%;
+}
+
+
+
+
         </style>
       </head>
       <body>
