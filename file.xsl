@@ -45,7 +45,7 @@
             align-items: center;
             justify-content: center;
           }
-          td {
+          td, th {
             border: 1px solid black;
             padding: 10px;
             text-align: center;
@@ -130,36 +130,42 @@
                 <caption>
                   Transakcje w PLN:
                 </caption>
-                <tr>
-                  <td>LP</td>
-                  <td>Nazwa tranzakcji</td>
-                  <td>Kwota</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Suma</td>
-                  <td>3</td>
-                </tr>
+             <tr>
+            <th>Lp.</th>
+            <th>Nazwa transakcji</th>
+            <th>Kwota</th>
+          </tr>
+          <xsl:variable name="transactions" select="transactions/transaction[kwota/@waluta='PLN' and (nazwa_transakcji='wpłata' or nazwa_transakcji='odsetki' or nazwa_transakcji='przelew' or nazwa_transakcji='korekta')]"/>
+          <xsl:variable name="wpłataSum" select="sum($transactions[nazwa_transakcji='wpłata']/kwota)"/>
+          <xsl:variable name="odsetkiSum" select="sum($transactions[nazwa_transakcji='odsetki']/kwota)"/>
+          <xsl:variable name="przelewSum" select="sum($transactions[nazwa_transakcji='przelew']/kwota)"/>
+          <xsl:variable name="korektaSum" select="sum($transactions[nazwa_transakcji='korekta']/kwota)"/>
+          <tr>
+           <td>1</td>
+            <td>wpłata</td>
+            <td><xsl:value-of select="$wpłataSum"/></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>odsetki</td>
+            <td><xsl:value-of select="$odsetkiSum"/></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>przelew</td>
+            <td><xsl:value-of select="$przelewSum"/></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>korekta</td>
+            <td><xsl:value-of select="$korektaSum"/></td>
+          </tr>
+          <tr class="total-row">
+            <td colspan="2">Suma</td>
+            <td>
+              <xsl:value-of select="sum($transactions/kwota)"/>
+            </td>
+          </tr>
               </table>
             </div>
             <div class="table glass" id="table2">
@@ -167,36 +173,42 @@
                 <caption>
                   Transakcje w EUR:
                 </caption>
-                <tr>
-                  <td>LP</td>
-                  <td>Nazwa tranzakcji</td>
-                  <td>Kwota</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Suma</td>
-                  <td>3</td>
-                </tr>
+                  <tr>
+            <th>Lp.</th>
+            <th>Nazwa transakcji</th>
+            <th>Kwota</th>
+          </tr>
+          <xsl:variable name="transactions" select="transactions/transaction[kwota/@waluta='EUR' and (nazwa_transakcji='wpłata' or nazwa_transakcji='odsetki' or nazwa_transakcji='przelew' or nazwa_transakcji='korekta')]"/>
+          <xsl:variable name="wpłataSum" select="sum($transactions[nazwa_transakcji='wpłata']/kwota)"/>
+          <xsl:variable name="odsetkiSum" select="sum($transactions[nazwa_transakcji='odsetki']/kwota)"/>
+          <xsl:variable name="przelewSum" select="sum($transactions[nazwa_transakcji='przelew']/kwota)"/>
+          <xsl:variable name="korektaSum" select="sum($transactions[nazwa_transakcji='korekta']/kwota)"/>
+          <tr>
+           <td>1</td>
+            <td>wpłata</td>
+            <td><xsl:value-of select="$wpłataSum"/></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>odsetki</td>
+            <td><xsl:value-of select="$odsetkiSum"/></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>przelew</td>
+            <td><xsl:value-of select="$przelewSum"/></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>korekta</td>
+            <td><xsl:value-of select="$korektaSum"/></td>
+          </tr>
+          <tr class="total-row">
+            <td colspan="2">Suma</td>
+            <td>
+              <xsl:value-of select="sum($transactions/kwota)"/>
+            </td>
+          </tr>
               </table>
             </div>
             <div class="table glass" id="table3">
@@ -205,25 +217,24 @@
                   Ilość transakcji wykonanych przez poszczególne osoby:
                 </caption>
                 <tr>
-                  <td>LP</td>
-                  <td>Wykonawca</td>
-                  <td>Ilość transakcji</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Jan J.</td>
-                  <td>3</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Ewa B.</td>
-                  <td>3</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Adam A.</td>
-                  <td>3</td>
-                </tr>
+            <th>Wykonawca</th>
+            <th>Ilość transakcji</th>
+          </tr>
+          <xsl:variable name="janCount" select="count(transactions/transaction[wykonal='Jan J.'])"/>
+          <xsl:variable name="ewaCount" select="count(transactions/transaction[wykonal='Ewa B.'])"/>
+          <xsl:variable name="adamCount" select="count(transactions/transaction[wykonal='Adam A.'])"/>
+          <tr>
+            <td>Jan J.</td>
+            <td><xsl:value-of select="$janCount"/></td>
+          </tr>
+          <tr>
+            <td>Ewa B.</td>
+            <td><xsl:value-of select="$ewaCount"/></td>
+          </tr>
+          <tr>
+            <td>Adam A.</td>
+            <td><xsl:value-of select="$adamCount"/></td>
+          </tr>
               </table>
             </div>
           </section>
