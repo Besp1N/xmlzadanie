@@ -35,7 +35,7 @@
 # 5. Backend:
 
     - Backend byl glownym zadaniem w calym cwicznieu, w pliku XML,
-    ztorzylem prosty szablon do ktorego wpisywalem kolejne rekordy
+    storzylem prosty szablon do ktorego wpisywalem kolejne rekordy
     z tabelki: Mamy glowny tag transactions w ktorym sa wszystkie transakcje,
     ponizej mamy transakcje, w ktorej jest LP,
     nazwa transakcji, ktowa z atrybutem waluta,
